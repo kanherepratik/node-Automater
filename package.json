@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node greyAtomLogin.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.2",
     "node-cron": "^1.2.1",
     "node-schedule": "^1.2.5",
     "nodemon": "^1.14.0",
