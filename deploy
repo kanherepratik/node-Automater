@@ -1,0 +1,6 @@
+-#!/bin/sh          
+ cd /your-project-path  
+ git pull       
+ npm install && npm start
+ exit       
+EOF
