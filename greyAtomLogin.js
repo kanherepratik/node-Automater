@@ -29,8 +29,8 @@ async function run() {
       waitUntil: "networkidle2"
     }
   );
-  await page.click(ATTENDANCE_SELECTOR);
-  browser.close();
+  await page.focus(ATTENDANCE_SELECTOR);
+  //browser.close();
 }
 
 run();
