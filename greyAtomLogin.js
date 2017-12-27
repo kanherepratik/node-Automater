@@ -9,7 +9,7 @@ const LOGOUT_SELECTOR =
 const URL = "https://greyatom.greythr.com";
 
 async function run() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   await page.goto(URL, {
@@ -29,12 +29,7 @@ async function run() {
       waitUntil: "networkidle2"
     }
   );
-  await page.focus(ATTENDANCE_SELECTOR);
-  await page.waitForSelector(LOGOUT_SELECTOR);
-  await page.click(LOGOUT_SELECTOR);
-  await page.click(
-    ".dropdown-menu .gts-user-dropdown-details .user-footer .user-signout"
-  );
+  await page.click(ATTENDANCE_SELECTOR);
   browser.close();
 }
 
